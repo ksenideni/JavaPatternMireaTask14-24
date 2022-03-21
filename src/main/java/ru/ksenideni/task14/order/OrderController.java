@@ -34,8 +34,7 @@ public class OrderController {
 
     @PostMapping
     public Order create(@RequestBody Order order) {
-        orderService.create(order);
-        return orderService.getOrderById(order.getId());
+        return orderService.create(order);
     }
 
 

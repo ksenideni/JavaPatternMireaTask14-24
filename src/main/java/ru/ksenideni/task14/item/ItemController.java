@@ -28,7 +28,7 @@ public class ItemController {
 
     @DeleteMapping("/{itemId}")
     public RedirectView remove(@PathVariable Long orderId, @PathVariable Long itemId) {
-        itemService.deleteItemById(orderId, itemId);
+        itemService.deleteItemById(itemId);
         return new RedirectView("/api/v1/orders/" + orderId + "/items");
     }
 
