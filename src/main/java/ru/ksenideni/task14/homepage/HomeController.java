@@ -1,4 +1,4 @@
-package ru.ksenideni.task14;
+package ru.ksenideni.task14.homepage;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
