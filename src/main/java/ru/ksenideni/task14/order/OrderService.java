@@ -1,32 +1,34 @@
 package ru.ksenideni.task14.order;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
+@Slf4j
 public class OrderService {
     private final OrderRepository orderRepository;
 
-    @Autowired
-    public OrderService(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
-    }
-
     public List<Order> getAllOrders() {
+        log.info("Find all orders");
         return orderRepository.findAll();
     }
 
     public Order getOrderById(Long id) {
+        log.info("Find order by id = {}", id);
         return orderRepository.findById(id).get();
     }
 
     public Order create(Order order) {
+        log.info("Save order");
         return orderRepository.save(order);
     }
 
     public void deleteOrderById(Long orderId) {
+        log.info("Remove order with id = {} in order", orderId);
         orderRepository.deleteById(orderId);
     }
 }
