@@ -2,6 +2,7 @@ package ru.ksenideni.task14.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -26,15 +27,13 @@ public class ItemController {
     }
 
     @DeleteMapping("/{itemId}")
-    public List<Item> remove(@PathVariable Long orderId, @PathVariable Long itemId) {
-        return itemService.deleteItemById(orderId, itemId);
+    public RedirectView remove(@PathVariable Long orderId, @PathVariable Long itemId) {
+        itemService.deleteItemById(orderId, itemId);
+        return new RedirectView("/api/v1/orders/" + orderId + "/items");
     }
 
     @PostMapping
     public Item create(@PathVariable Long orderId, @RequestBody Item item) {
         return itemService.create(orderId, item);
-//        return itemService.getItemById(orderId, item.getId());
     }
-
-
 }

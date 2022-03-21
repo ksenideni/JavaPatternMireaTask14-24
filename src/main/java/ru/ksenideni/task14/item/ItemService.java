@@ -15,10 +15,15 @@ public class ItemService {
     private final SessionFactory sessionFactory;
 //    private Session session;
 
-//    @PostConstruct
+    //    @PostConstruct
 //    void init() {
 //        session = ;
 //    }
+    @Autowired
+    public ItemService(OrderService orderService, SessionFactory sessionFactory) {
+        this.orderService = orderService;
+        this.sessionFactory = sessionFactory;
+    }
 
     public List<Item> getAllItems(Long orderId) {
         Session session = sessionFactory.openSession();
@@ -28,12 +33,6 @@ public class ItemService {
         transaction.commit();
         session.close();
         return itemList;
-    }
-
-    @Autowired
-    public ItemService(OrderService orderService, SessionFactory sessionFactory) {
-        this.orderService = orderService;
-        this.sessionFactory = sessionFactory;
     }
 
     public Item getItemById(Long itemId) {
@@ -56,12 +55,12 @@ public class ItemService {
         return item;
     }
 
-    public List<Item> deleteItemById(Long orderId, Long itemId) {
+    public void deleteItemById(Long orderId, Long itemId) {
         Session session = sessionFactory.openSession();
         Item i = getItemById(itemId);
         var transaction = session.beginTransaction();
         session.delete(i);
         transaction.commit();
-        return getAllItems(orderId);
+        session.close();
     }
 }

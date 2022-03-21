@@ -48,5 +48,6 @@ public class OrderService {
         Order o = session.get(Order.class, orderId);
         session.delete(o);
         transaction.commit();
+        session.close();
     }
 }
