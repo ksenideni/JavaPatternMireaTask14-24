@@ -1,11 +1,11 @@
-package ru.ksenideni.task14.item;
+package ru.ksenideni.item;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.ksenideni.task14.order.Order;
+import ru.ksenideni.order.Order;
 
 import javax.persistence.*;
 
@@ -29,7 +29,7 @@ public class Item {
 
     @ManyToOne
     @JsonIgnore
-    @JoinColumn(name="order_id")
+    @JoinColumn(name = "order_id")
     private Order order;
 
     @Override

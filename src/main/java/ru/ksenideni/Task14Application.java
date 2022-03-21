@@ -1,4 +1,4 @@
-package ru.ksenideni.task14;
+package ru.ksenideni;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Task14Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Task14Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Task14Application.class, args);
+    }
 
 }

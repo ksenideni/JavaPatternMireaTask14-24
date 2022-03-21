@@ -1,4 +1,4 @@
-package ru.ksenideni.task14;
+package ru.ksenideni;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

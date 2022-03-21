@@ -1,10 +1,10 @@
-package ru.ksenideni.task14.order;
+package ru.ksenideni.order;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.ksenideni.task14.item.Item;
+import ru.ksenideni.item.Item;
 
 import javax.persistence.*;
 import java.util.List;

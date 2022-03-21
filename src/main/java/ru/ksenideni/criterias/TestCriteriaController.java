@@ -1,12 +1,12 @@
-package ru.ksenideni.task14.criterias;
+package ru.ksenideni.criterias;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.ksenideni.task14.item.Item;
-import ru.ksenideni.task14.item.ItemRepository;
+import ru.ksenideni.item.Item;
+import ru.ksenideni.item.ItemRepository;
 
 import java.util.List;
 

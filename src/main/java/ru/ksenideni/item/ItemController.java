@@ -1,4 +1,4 @@
-package ru.ksenideni.task14.item;
+package ru.ksenideni.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,10 +1,10 @@
-package ru.ksenideni.task14.item;
+package ru.ksenideni.item;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import ru.ksenideni.task14.order.Order;
-import ru.ksenideni.task14.order.OrderRepository;
+import ru.ksenideni.order.Order;
+import ru.ksenideni.order.OrderRepository;
 
 import java.util.List;
 

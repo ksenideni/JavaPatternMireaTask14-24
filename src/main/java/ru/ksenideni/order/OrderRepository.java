@@ -1,4 +1,4 @@
-package ru.ksenideni.task14.order;
+package ru.ksenideni.order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
