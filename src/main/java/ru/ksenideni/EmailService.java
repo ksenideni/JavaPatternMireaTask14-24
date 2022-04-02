@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
-@Service
+//@Service
 @RequiredArgsConstructor
 public class EmailService {
     @Autowired

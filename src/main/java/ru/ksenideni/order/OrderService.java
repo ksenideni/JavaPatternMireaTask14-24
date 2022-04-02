@@ -14,7 +14,7 @@ import java.util.List;
 @Transactional
 public class OrderService {
     private final OrderRepository orderRepository;
-    private final EmailService emailService;
+//    private final EmailService emailService;
 
     public List<Order> getAllOrders() {
         log.info("Find all orders");
@@ -29,7 +29,7 @@ public class OrderService {
     public Order create(Order order) {
         log.info("Save order");
         Order o= orderRepository.save(order);
-        emailService.sendSimpleMessage(o);
+//        emailService.sendSimpleMessage(o);
         return o;
     }
 

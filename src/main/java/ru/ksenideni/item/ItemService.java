@@ -17,7 +17,7 @@ import java.util.List;
 public class ItemService {
     private final ItemRepository itemRepository;
     private final OrderRepository orderRepository;
-    private final EmailService emailService;
+//    private final EmailService emailService;
 
     public List<Item> getAllItems(Long orderId) {
         log.info("Find all items in order with id = {}", orderId);
@@ -34,7 +34,7 @@ public class ItemService {
         Order order = orderRepository.findById(orderId).get();
         item.setOrder(order);
         Item i =  itemRepository.save(item);
-        emailService.sendSimpleMessage(i);
+//        emailService.sendSimpleMessage(i);
         return i;
     }
 
