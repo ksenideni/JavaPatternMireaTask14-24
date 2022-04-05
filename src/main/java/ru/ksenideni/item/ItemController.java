@@ -1,5 +1,6 @@
 package ru.ksenideni.item;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
@@ -7,14 +8,10 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(path = "/api/v1/orders/{orderId}/items")
 public class ItemController {
     private final ItemService itemService;
-
-    @Autowired
-    public ItemController(ItemService itemService) {
-        this.itemService = itemService;
-    }
 
     @GetMapping
     public List<Item> getItems(@PathVariable Long orderId) {

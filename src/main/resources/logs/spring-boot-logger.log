@@ -976,3 +976,7 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: отношение "
 366353 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
 366357 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
 366374 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+297  [main] INFO  ru.ksenideni.order.OrderService – Find all orders
+265  [main] INFO  ru.ksenideni.order.OrderService – Find all orders
+211  [main] INFO  ru.ksenideni.order.OrderService – Remove order with id = 1 in order
+219  [main] INFO  ru.ksenideni.order.OrderService – Remove order with id = 1 in order
